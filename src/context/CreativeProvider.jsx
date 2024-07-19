@@ -3,6 +3,7 @@ import CreativeContext from "./creativeContext";
 import useDebounce from "../hooks/useDebounce";
 
 const CreativeProvider = ({ children }) => {
+  // all these states are maintained in the context provider so that they can be acessible through the application since we are wrapping the provider on top of the creative dashboard element
   const [searchValue, setSearchValue] = useState("");
   const [openDrawer, setOpenDrawer] = useState(false);
   const [filterColor, setFilterColor] = useState("");
@@ -10,6 +11,7 @@ const CreativeProvider = ({ children }) => {
   const [creativeList, setCreativeList] = useState([]);
   const [colors, setColors] = useState([]);
 
+  // using debouncing so that when the user is typing it doesn't perform the searchValue function instead if only the user has a pause of 500ms, then use the function and do the filter functionality
   const debouncedSearchValue = useDebounce(searchValue, 500);
 
   useEffect(() => {

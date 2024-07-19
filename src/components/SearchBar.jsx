@@ -5,6 +5,7 @@ import InputField from "./InputField";
 const SearchBar = ({ label }) => {
   const { searchValue, setSearchValue } = useContext(CreativeContext);
 
+  // we are taking the searchValue and setSearchValue from the global context and using them as the user types something in the filter input
   const handleChange = (e) => {
     setSearchValue(e.target.value);
   };

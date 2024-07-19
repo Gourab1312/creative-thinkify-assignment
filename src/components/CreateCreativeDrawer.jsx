@@ -24,16 +24,19 @@ const CreateCreativeDrawer = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setOpenDrawer(false);
+    // collected form data goes into the creativeList array, and we are just speading both like this
     const updatedCreative = [...creativeList, { ...formData }];
     updateCreativeList(updatedCreative);
     setFormData(initialFormState);
   };
 
   const handleChange = (e) => {
+    // changing the formdata on every keystroke pressed in the inputss
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   const selectColor = (e) => {
+    // when the user clicks on the color pills in the creative creation drawer, this is used to pass it to the formData
     setFormData({
       ...formData,
       color: e.target.getAttribute("data-color"),

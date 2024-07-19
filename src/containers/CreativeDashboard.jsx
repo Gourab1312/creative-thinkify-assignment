@@ -9,6 +9,7 @@ import CreateCreativeDrawer from "../components/CreateCreativeDrawer";
 import CreativeCard from "../components/CreativeCard";
 
 const CreativeDashboard = () => {
+  // getting all the main functionality states from the global state
   const {
     openDrawer,
     setOpenDrawer,
@@ -20,6 +21,7 @@ const CreativeDashboard = () => {
     colors,
   } = useContext(CreativeContext);
 
+  // fetching the colors from the api as soon as the page mounts
   const fetchColors = async () => {
     const data = await fetch(
       "https://random-flat-colors.vercel.app/api/random?count=5"
