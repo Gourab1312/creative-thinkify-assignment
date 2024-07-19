@@ -1,0 +1,18 @@
+.add-creative-button {
+    border-radius: 3px;
+    border: 2px solid var(--text-color);
+    display: flex;
+    gap: 5px;
+    outline: none;
+    padding: 9px 20px;
+    background-color: transparent;
+    margin-top: 20px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.disabled-button {
+    border-color: var(--text-light-color);
+    color: var(--text-light-color) !important;
+    pointer-events: none;
+}

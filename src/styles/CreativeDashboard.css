@@ -1,0 +1,17 @@
+.dashboard-wrapper {
+    padding: 20px;
+    min-height: 100vh;
+    height: 100vh;
+}
+
+.color-selection-wrapper {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+
+}
+
+.opened-drawer {
+    width: calc(100vw - var(--drawer-width));
+    overflow: auto !important;
+}

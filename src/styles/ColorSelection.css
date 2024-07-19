@@ -1,0 +1,11 @@
+.color-selection {
+    width: 30px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    border: 2px solid var(--text-color);
+    display: inline-block;
+}
+
+.selected-color {
+    box-shadow: 0 0 0 2px white, 0 0 0 4px var(--text-color);
+}
