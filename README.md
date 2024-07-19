@@ -5,3 +5,10 @@ Steps to run the app locally :
 2. Install the node modules using npm install
 
 3. Start the server locally using npm start and it will run the application in port 3000.
+
+
+Deployment : 
+
+The app is deployed using vercel. 
+
+Live link : https://creative-thinkify-assignment.vercel.app/
